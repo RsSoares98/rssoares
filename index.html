@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGREJA INTERNACIONAL O ALTAR DOS MILAGRES</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    
+    .font-lora {
+      font-family: 'Lora', serif;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .gradient-gold {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+    }
+    
+    .text-gold {
+      color: #d4af37;
+    }
+    
+    .bg-gold {
+      background-color: #d4af37;
+    }
+    
+    .border-gold {
+      border-color: #d4af37;
+    }
+    
+    .hover-gold:hover {
+      background-color: #b8962e;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+    }
+    
+    .cross-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 0h4v60h-4zM0 28h60v4H0z' fill='%23d4af37' fill-opacity='0.03'/%3E%3C/svg%3E");
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .nav-active {
+      color: #d4af37;
+      border-bottom: 2px solid #d4af37;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1a1a2e;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #d4af37;
+      border-radius: 4px;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+ </head>
+ <body class="h-full font-lora bg-[#0f0f1a] text-gray-100 overflow-auto">
+  <div id="app" class="w-full h-full"><!-- Navigation -->
+   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#0f0f1a]/95 backdrop-blur-md border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 md:h-20">
+      <div class="flex items-center gap-3">
+       <svg class="w-10 h-10 md:w-12 md:h-12 text-gold" viewbox="0 0 100 100" fill="currentColor"><path d="M50 5L55 35H65L50 50L35 35H45L50 5Z" /> <path d="M30 40L50 60L70 40L75 45L50 70L25 45L30 40Z" /> <path d="M20 55L50 85L80 55L85 60L50 95L15 60L20 55Z" /> <circle cx="50" cy="25" r="8" fill="none" stroke="currentColor" stroke-width="2" />
+       </svg>
+       <div>
+        <h1 id="church-name" class="font-cinzel text-sm md:text-lg font-bold text-gold leading-tight">INTERNACIONAL</h1>
+        <p class="font-cinzel text-xs md:text-sm text-gray-300">O ALTAR DOS MILAGRES</p>
+       </div>
+      </div><!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center gap-6"><a href="#home" class="nav-link text-sm hover:text-gold transition-colors">Início</a> <a href="#sobre" class="nav-link text-sm hover:text-gold transition-colors">Sobre</a> <a href="#lideranca" class="nav-link text-sm hover:text-gold transition-colors">Liderança</a> <a href="#ministerios" class="nav-link text-sm hover:text-gold transition-colors">Ministérios</a> <a href="#programacao" class="nav-link text-sm hover:text-gold transition-colors">Programação</a> <a href="#galeria" class="nav-link text-sm hover:text-gold transition-colors">Galeria</a> <a href="#oracao" class="nav-link text-sm hover:text-gold transition-colors">Oração</a> <a href="#ofertas" class="nav-link text-sm hover:text-gold transition-colors">Ofertas</a> <a href="#contato" class="nav-link text-sm hover:text-gold transition-colors">Contato</a>
+      </div><!-- Mobile Menu Button --> <button id="menu-toggle" class="lg:hidden p-2 text-gold">
+       <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg>
+       <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+       </svg></button>
+     </div><!-- Mobile Menu -->
+     <div id="mobile-menu" class="lg:hidden hidden pb-4">
+      <div class="flex flex-col gap-2"><a href="#home" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Início</a> <a href="#sobre" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Sobre</a> <a href="#lideranca" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Liderança</a> <a href="#ministerios" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Ministérios</a> <a href="#programacao" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Programação</a> <a href="#galeria" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Galeria</a> <a href="#oracao" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Oração</a> <a href="#ofertas" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Ofertas</a> <a href="#contato" class="mobile-nav-link py-2 px-4 hover:bg-gold/10 rounded-lg text-sm">Contato</a>
+      </div>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="home" class="relative min-h-screen flex items-center justify-center gradient-gold cross-pattern pt-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f1a]/50 to-[#0f0f1a]"></div><!-- Decorative Elements -->
+    <div class="absolute top-1/4 left-10 opacity-20 animate-float">
+     <svg class="w-16 h-16 text-gold" viewbox="0 0 100 100" fill="currentColor"><polygon points="50,5 61,40 98,40 68,62 79,97 50,75 21,97 32,62 2,40 39,40" />
+     </svg>
+    </div>
+    <div class="absolute bottom-1/3 right-10 opacity-20 animate-float" style="animation-delay: -3s;">
+     <svg class="w-12 h-12 text-gold" viewbox="0 0 100 100" fill="currentColor"><polygon points="50,5 61,40 98,40 68,62 79,97 50,75 21,97 32,62 2,40 39,40" />
+     </svg>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
+     <div class="mb-6">
+      <svttg class="w-20 h-20 md:w-28 md:h-28 mx-auto text-gold mb-4" viewbox="0 0 100 100" fill="currentColor"><path d="M45 10h10v35h-10z" /> <path d="M30 25h40v10H30z" /> <path d="M50 45c-15 0-30 10-30 25v20h60V70c0-15-15-25-30-25z" fill="none" stroke="currentColor" stroke-width="3" /> <circle cx="50" cy="55" r="5" /> <path d="M35 85v-15c0-8 7-15 15-15s15 7 15 15v15" fill="none" stroke="currentColor" stroke-width="2" />
+      </svg6>
+     </div>
+     <h1 class="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-gold mb-4 leading-tight">INTERNACIONAL<br>
+      O ALTAR DOS MILAGRES</h1>
+     <p id="versiculo-hero" class="text-lg md:text-2xl text-gray-200 italic mb-2">"Porque onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles."</p>
+     <p class="text-gold font-semibold mb-8">Mateus 18:20</p>
+     <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Um lugar de fé, restauração e milagres. Venha experimentar o poder transformador de Deus e fazer parte desta família abençoada.</p>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="#contato" class="bg-gold hover-gold text-[#0f0f1a] font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-gold/30"> ✝️ Visite-nos </a> <a href="#programacao" class="border-2 border-gold text-gold hover:bg-gold/10 font-bold py-4 px-8 rounded-full transition-all"> 📅 Nossos Cultos </a>
+     </div><!-- Horários Destaque -->
+     <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+      <div class="bg-[#1a1a2e]/80 backdrop-blur-sm border border-gold/20 rounded-xl p-4 card-hover">
+       <p class="text-gold font-cinzel font-bold">DOMINGO</p>
+       <p id="horario-domingo-hero" class="text-2xl font-bold">09h e 18h</p>
+       <p class="text-gray-400 text-sm">Culto da Família</p>
+      </div>
+      <div class="bg-[#1a1a2e]/80 backdrop-blur-sm border border-gold/20 rounded-xl p-4 card-hover">
+       <p class="text-gold font-cinzel font-bold">QUARTA-FEIRA</p>
+       <p id="horario-quarta-hero" class="text-2xl font-bold">19h30</p>
+       <p class="text-gray-400 text-sm">Culto de Libertação</p>
+      </div>
+      <div class="bg-[#1a1a2e]/80 backdrop-blur-sm border border-gold/20 rounded-xl p-4 card-hover">
+       <p class="text-gold font-cinzel font-bold">SEXTA-FEIRA</p>
+       <p id="horario-sexta-hero" class="text-2xl font-bold">19h30</p>
+       <p class="text-gray-400 text-sm">Culto de Milagres</p>
+      </div>
+     </div>
+    </div><!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+     <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+     </svg>
+    </div>
+   </section><!-- Próximos Eventos -->
+   <section class="py-16 px-4 bg-[#0f0f1a]">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-12">
+      <p class="text-gold font-cinzel tracking-widest mb-2">AGENDA</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Próximos Eventos</h2>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/20 rounded-2xl overflow-hidden card-hover">
+       <div class="bg-gold text-[#0f0f1a] p-4 text-center">
+        <p class="font-cinzel text-3xl font-bold">15</p>
+        <p class="font-cinzel">JANEIRO</p>
+       </div>
+       <div class="p-6">
+        <h3 class="font-cinzel text-xl font-bold text-gold mb-2">Congresso de Milagres</h3>
+        <p class="text-gray-300 mb-4">Três dias de unção, cura e restauração. Venha receber sua bênção!</p>
+        <p class="text-sm text-gray-400">📍 Sede da Igreja • ⏰ 19h</p>
+       </div>
+      </div>
+      <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/20 rounded-2xl overflow-hidden card-hover">
+       <div class="bg-gold text-[#0f0f1a] p-4 text-center">
+        <p class="font-cinzel text-3xl font-bold">22</p>
+        <p class="font-cinzel">JANEIRO</p>
+       </div>
+       <div class="p-6">
+        <h3 class="font-cinzel text-xl font-bold text-gold mb-2">Encontro de Casais</h3>
+        <p class="text-gray-300 mb-4">Fortaleça seu casamento com a Palavra de Deus. Vagas limitadas!</p>
+        <p class="text-sm text-gray-400">📍 Salão Social • ⏰ 17h</p>
+       </div>
+      </div>
+      <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/20 rounded-2xl overflow-hidden card-hover">
+       <div class="bg-gold text-[#0f0f1a] p-4 text-center">
+        <p class="font-cinzel text-3xl font-bold">31</p>
+        <p class="font-cinzel">JANEIRO</p>
+       </div>
+       <div class="p-6">
+        <h3 class="font-cinzel text-xl font-bold text-gold mb-2">Vigília de Adoração</h3>
+        <p class="text-gray-300 mb-4">Uma noite inteira na presença do Senhor. Venha buscar o sobrenatural!</p>
+        <p class="text-sm text-gray-400">📍 Templo Principal • ⏰ 22h</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Sobre a Igreja -->
+   <section id="sobre" class="py-20 px-4 bg-gradient-to-b from-[#0f0f1a] to-[#1a1a2e] cross-pattern">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-gold font-cinzel tracking-widest mb-2">CONHEÇA</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Nossa História</h2>
+     </div>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+       <div class="bg-gradient-to-br from-[#1a1a2e] to-[#0f0f1a] border border-gold/20 rounded-2xl p-8">
+        <svg class="w-16 h-16 text-gold mb-6" viewbox="0 0 100 100" fill="currentColor"><path d="M50 10L60 40H90L65 58L75 90L50 70L25 90L35 58L10 40H40L50 10Z" />
+        </svg>
+        <p class="text-gray-300 text-lg leading-relaxed mb-4">A Igreja Internacional O Altar dos Milagres nasceu de um chamado divino para transformar vidas através do poder do Evangelho. Fundada com a missão de ser um lugar onde os milagres acontecem, nossa igreja tem sido instrumento de Deus para alcançar famílias, restaurar casamentos e curar enfermos.</p>
+        <p class="text-gray-300 text-lg leading-relaxed">Ao longo dos anos, temos testemunhado o mover sobrenatural de Deus em cada culto. Milhares de pessoas já experimentaram a transformação que só Jesus pode oferecer. Nossa história é escrita pela fé de homens e mulheres que creem no impossível.</p>
+       </div>
+      </div>
+      <div class="space-y-6"><!-- Visão -->
+       <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+        <div class="flex items-center gap-4 mb-3">
+         <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+         </div>
+         <h3 class="font-cinzel text-xl font-bold text-gold">Nossa Visão</h3>
+        </div>
+        <p class="text-gray-300">Ser uma igreja relevante que impacta gerações, levando o Evangelho transformador até os confins da terra, formando discípulos comprometidos com o Reino de Deus.</p>
+       </div><!-- Missão -->
+       <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+        <div class="flex items-center gap-4 mb-3">
+         <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+         </div>
+         <h3 class="font-cinzel text-xl font-bold text-gold">Nossa Missão</h3>
+        </div>
+        <p class="text-gray-300">Levar a Palavra de Deus com poder e autoridade, acolher vidas feridas, fortalecer famílias e preparar uma geração de adoradores verdadeiros.</p>
+       </div><!-- Valores -->
+       <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+        <div class="flex items-center gap-4 mb-3">
+         <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+         </div>
+         <h3 class="font-cinzel text-xl font-bold text-gold">Nossos Valores</h3>
+        </div>
+        <div class="flex flex-wrap gap-2"><span class="bg-gold/20 text-gold px-3 py-1 rounded-full text-sm">Fé</span> <span class="bg-gold/20 text-gold px-3 py-1 rounded-full text-sm">Amor</span> <span class="bg-gold/20 text-gold px-3 py-1 rounded-full text-sm">Família</span> <span class="bg-gold/20 text-gold px-3 py-1 rounded-full text-sm">Integridade</span> <span class="bg-gold/20 text-gold px-3 py-1 rounded-full text-sm">Excelência</span> <span class="bg-gold/20 text-gold px-3 py-1 rounded-full text-sm">Comunhão</span>
+        </div>
+       </div>
+      </div>
+     </div><!-- Mensagem Pastoral -->
+     <div class="bg-gradient-to-r from-gold/10 via-[#1a1a2e] to-gold/10 border border-gold/30 rounded-2xl p-8 md:p-12">
+      <div class="max-w-3xl mx-auto text-center">
+       <svg class="w-12 h-12 text-gold mx-auto mb-6 opacity-50" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+       </svg>
+       <p class="text-xl md:text-2xl text-gray-200 italic mb-6 leading-relaxed">"Bem-vindo à nossa família! Aqui você encontrará mais do que uma igreja – encontrará um lar espiritual onde o amor de Deus é derramado sobre cada vida. Cremos que Deus tem um propósito especial para você, e é uma honra caminhar ao seu lado nessa jornada de fé. Que cada palavra ministrada toque seu coração e que você experimente o sobrenatural de Deus conosco."</p>
+       <p class="text-gold font-cinzel font-bold">Pastor Presidente</p>
+       <p class="text-gray-400">Igreja Internacional O Altar dos Milagres</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Liderança -->
+   <section id="lideranca" class="py-20 px-4 bg-[#0f0f1a]">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-gold font-cinzel tracking-widest mb-2">SERVOS DE DEUS</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Nossa Liderança</h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Homens e mulheres chamados por Deus para pastorear, ensinar e cuidar do rebanho com amor e dedicação.</p>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Pastor Presidente -->
+      <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/30 rounded-2xl overflow-hidden card-hover lg:col-span-1 md:col-span-2 lg:row-span-2">
+       <div class="bg-gradient-to-br from-gold/20 to-transparent p-8 flex flex-col items-center">
+        <div class="w-32 h-32 bg-gradient-to-br from-gold to-[#b8962e] rounded-full flex items-center justify-center mb-4 shadow-lg shadow-gold/30">
+         <svg class="w-16 h-16 text-[#0f0f1a]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+         </svg>
+        </div>
+        <h3 class="font-cinzel text-2xl font-bold text-gold mb-1">Pastor Presidente</h3>
+        <p class="text-gray-400 mb-4">Fundador e Líder Espiritual</p>
+       </div>
+       <div class="p-6">
+        <p class="text-gray-300 leading-relaxed mb-4">Chamado por Deus desde jovem para o ministério, nosso Pastor Presidente dedica sua vida a proclamar o Evangelho com poder e autoridade. Seu ministério é marcado por milagres, curas e libertações.</p>
+        <p class="text-gray-300 leading-relaxed">Com um coração pastoral, ele lidera nossa igreja com sabedoria, sempre buscando a direção do Espírito Santo para conduzir o rebanho aos propósitos de Deus.</p>
+        <div class="mt-6 pt-6 border-t border-gold/20">
+         <p class="text-gold italic text-sm">"Não vim para ser servido, mas para servir e dar a minha vida pelo Reino."</p>
+        </div>
+       </div>
+      </div><!-- Outros Líderes -->
+      <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+       <div class="flex items-center gap-4 mb-4">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
+         <svg class="w-8 h-8 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-lg font-bold text-gold">Pastora</h3>
+         <p class="text-gray-400 text-sm">Ministério Feminino</p>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm">Líder do Ministério de Mulheres, dedicada ao ensino e discipulado. Seu ministério tem transformado a vida de centenas de mulheres.</p>
+      </div>
+      <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+       <div class="flex items-center gap-4 mb-4">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
+         <svg class="w-8 h-8 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-lg font-bold text-gold">Pastor Auxiliar</h3>
+         <p class="text-gray-400 text-sm">Ensino e Discipulado</p>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm">Responsável pela Escola Bíblica e formação de líderes. Teólogo formado, apaixonado pelo estudo da Palavra.</p>
+      </div>
+      <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+       <div class="flex items-center gap-4 mb-4">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
+         <svg class="w-8 h-8 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-lg font-bold text-gold">Líder de Jovens</h3>
+         <p class="text-gray-400 text-sm">Ministério Jovem</p>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm">Chamado para alcançar a juventude com o Evangelho relevante. Lidera com criatividade e paixão por esta geração.</p>
+      </div>
+      <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 card-hover">
+       <div class="flex items-center gap-4 mb-4">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
+         <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-lg font-bold text-gold">Ministro de Louvor</h3>
+         <p class="text-gray-400 text-sm">Adoração e Música</p>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm">Lidera a equipe de adoração com unção e excelência, conduzindo a igreja à presença de Deus através do louvor.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Ministérios -->
+   <section id="ministerios" class="py-20 px-4 bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a]">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-gold font-cinzel tracking-widest mb-2">SERVINDO JUNTOS</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Nossos Ministérios</h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Cada ministério é uma oportunidade de servir a Deus e ao próximo. Encontre seu lugar de serviço!</p>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Ministério Infantil -->
+      <div class="group bg-[#1a1a2e]/50 border border-gold/20 rounded-2xl p-8 card-hover">
+       <div class="w-16 h-16 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><span class="text-4xl">👶</span>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-3">Ministério Infantil</h3>
+       <p class="text-gray-300 mb-4">Ensinando as crianças no caminho em que devem andar. Aulas criativas, teatro, músicas e muito amor pelo Reino de Deus.</p>
+       <p class="text-sm text-gold italic">"Deixai vir a mim os pequeninos" - Marcos 10:14</p>
+      </div><!-- Jovens -->
+      <div class="group bg-[#1a1a2e]/50 border border-gold/20 rounded-2xl p-8 card-hover">
+       <div class="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><span class="text-4xl">🔥</span>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-3">Ministério Jovem</h3>
+       <p class="text-gray-300 mb-4">Uma geração apaixonada por Jesus! Encontros dinâmicos, retiros, células e muito mais para jovens de 12 a 30 anos.</p>
+       <p class="text-sm text-gold italic">"Ninguém despreze a tua mocidade" - 1 Timóteo 4:12</p>
+      </div><!-- Mulheres -->
+      <div class="group bg-[#1a1a2e]/50 border border-gold/20 rounded-2xl p-8 card-hover">
+       <div class="w-16 h-16 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><span class="text-4xl">💜</span>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-3">Mulheres de Valor</h3>
+       <p class="text-gray-300 mb-4">Fortalecendo mulheres na fé, no lar e na sociedade. Encontros de oração, congressos e discipulado para todas as idades.</p>
+       <p class="text-sm text-gold italic">"Mulher virtuosa, quem a achará?" - Provérbios 31:10</p>
+      </div><!-- Homens -->
+      <div class="group bg-[#1a1a2e]/50 border border-gold/20 rounded-2xl p-8 card-hover">
+       <div class="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><span class="text-4xl">⚔️</span>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-3">Homens de Deus</h3>
+       <p class="text-gray-300 mb-4">Formando homens segundo o coração de Deus. Café com propósito, estudos bíblicos e encontros que transformam lares.</p>
+       <p class="text-sm text-gold italic">"Sede fortes e corajosos" - Josué 1:9</p>
+      </div><!-- Louvor -->
+      <div class="group bg-[#1a1a2e]/50 border border-gold/20 rounded-2xl p-8 card-hover">
+       <div class="w-16 h-16 bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><span class="text-4xl">🎵</span>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-3">Ministério de Louvor</h3>
+       <p class="text-gray-300 mb-4">Adoradores que conduzem a igreja à presença de Deus. Músicos, cantores e técnicos unidos em um só propósito: adorar!</p>
+       <p class="text-sm text-gold italic">"Louvai ao Senhor com instrumentos" - Salmo 150</p>
+      </div><!-- Evangelismo -->
+      <div class="group bg-[#1a1a2e]/50 border border-gold/20 rounded-2xl p-8 card-hover">
+       <div class="w-16 h-16 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><span class="text-4xl">🌍</span>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-3">Evangelismo</h3>
+       <p class="text-gray-300 mb-4">Levando o amor de Cristo às ruas, hospitais, presídios e comunidades. Ações sociais e pregação do Evangelho onde há necessidade.</p>
+       <p class="text-sm text-gold italic">"Ide por todo o mundo" - Marcos 16:15</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Programação -->
+   <section id="programacao" class="py-20 px-4 bg-[#0f0f1a] cross-pattern">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-gold font-cinzel tracking-widest mb-2">VENHA NOS VISITAR</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Programação Semanal</h2>
+     </div>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><!-- Cultos Regulares -->
+      <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/30 rounded-2xl overflow-hidden">
+       <div class="bg-gold/10 p-6 border-b border-gold/20">
+        <h3 class="font-cinzel text-2xl font-bold text-gold flex items-center gap-3">
+         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg> Cultos Semanais</h3>
+       </div>
+       <div class="p-6 space-y-4">
+        <div class="flex items-center justify-between p-4 bg-[#0f0f1a]/50 rounded-xl">
+         <div>
+          <p class="font-cinzel font-bold text-gold">DOMINGO</p>
+          <p class="text-gray-400 text-sm">Culto da Família</p>
+         </div>
+         <div class="text-right">
+          <p id="prog-domingo" class="text-xl font-bold">09h e 18h</p>
+         </div>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-[#0f0f1a]/50 rounded-xl">
+         <div>
+          <p class="font-cinzel font-bold text-gold">TERÇA-FEIRA</p>
+          <p class="text-gray-400 text-sm">Culto de Oração</p>
+         </div>
+         <div class="text-right">
+          <p class="text-xl font-bold">19h30</p>
+         </div>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-[#0f0f1a]/50 rounded-xl">
+         <div>
+          <p class="font-cinzel font-bold text-gold">QUARTA-FEIRA</p>
+          <p class="text-gray-400 text-sm">Culto de Libertação</p>
+         </div>
+         <div class="text-right">
+          <p id="prog-quarta" class="text-xl font-bold">19h30</p>
+         </div>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-[#0f0f1a]/50 rounded-xl">
+         <div>
+          <p class="font-cinzel font-bold text-gold">QUINTA-FEIRA</p>
+          <p class="text-gray-400 text-sm">Escola Bíblica</p>
+         </div>
+         <div class="text-right">
+          <p class="text-xl font-bold">19h30</p>
+         </div>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-[#0f0f1a]/50 rounded-xl">
+         <div>
+          <p class="font-cinzel font-bold text-gold">SEXTA-FEIRA</p>
+          <p class="text-gray-400 text-sm">Culto de Milagres</p>
+         </div>
+         <div class="text-right">
+          <p id="prog-sexta" class="text-xl font-bold">19h30</p>
+         </div>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-[#0f0f1a]/50 rounded-xl">
+         <div>
+          <p class="font-cinzel font-bold text-gold">SÁBADO</p>
+          <p class="text-gray-400 text-sm">Reunião de Jovens</p>
+         </div>
+         <div class="text-right">
+          <p class="text-xl font-bold">19h</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Eventos Especiais -->
+      <div class="space-y-6">
+       <div class="bg-gradient-to-br from-gold/20 to-[#1a1a2e] border border-gold/30 rounded-2xl p-6">
+        <h3 class="font-cinzel text-xl font-bold text-gold mb-4 flex items-center gap-3"><span class="text-2xl">🌙</span> Vigílias Mensais</h3>
+        <p class="text-gray-300 mb-3">Toda última sexta-feira do mês, das 22h às 5h</p>
+        <p class="text-gray-400 text-sm">Uma noite de oração, adoração e busca pelo sobrenatural de Deus. Venha clamar por milagres!</p>
+       </div>
+       <div class="bg-gradient-to-br from-gold/20 to-[#1a1a2e] border border-gold/30 rounded-2xl p-6">
+        <h3 class="font-cinzel text-xl font-bold text-gold mb-4 flex items-center gap-3"><span class="text-2xl">📖</span> Escola Bíblica Dominical</h3>
+        <p class="text-gray-300 mb-3">Domingos às 09h (antes do culto da manhã)</p>
+        <p class="text-gray-400 text-sm">Classes para todas as idades: crianças, adolescentes, jovens e adultos.</p>
+       </div>
+       <div class="bg-gradient-to-br from-gold/20 to-[#1a1a2e] border border-gold/30 rounded-2xl p-6">
+        <h3 class="font-cinzel text-xl font-bold text-gold mb-4 flex items-center gap-3"><span class="text-2xl">🏠</span> Células nos Lares</h3>
+        <p class="text-gray-300 mb-3">Diversas opções durante a semana</p>
+        <p class="text-gray-400 text-sm">Pequenos grupos que se reúnem em casas para estudar a Palavra, orar e ter comunhão.</p>
+       </div>
+       <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6 text-center">
+        <p class="text-gold font-cinzel font-bold mb-2">Congressos Anuais</p>
+        <div class="flex flex-wrap justify-center gap-2"><span class="bg-gold/20 px-3 py-1 rounded-full text-sm">Congresso de Mulheres</span> <span class="bg-gold/20 px-3 py-1 rounded-full text-sm">Congresso de Homens</span> <span class="bg-gold/20 px-3 py-1 rounded-full text-sm">Conferência de Jovens</span> <span class="bg-gold/20 px-3 py-1 rounded-full text-sm">Congresso de Milagres</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Galeria -->
+   <section id="galeria" class="py-20 px-4 bg-gradient-to-b from-[#0f0f1a] to-[#1a1a2e]">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16">
+      <p class="text-gold font-cinzel tracking-widest mb-2">MOMENTOS ESPECIAIS</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Nossa Galeria</h2>
+      <p class="text-gray-400 mt-4">Registros da glória de Deus em nossos cultos e eventos</p>
+     </div>
+     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"><!-- Placeholder Images with Icons -->
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">⛪</span>
+       <p class="text-sm text-gray-400 text-center">Culto de Adoração</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover md:col-span-2 md:row-span-2"><span class="text-6xl mb-4">🙌</span>
+       <p class="text-lg text-gold font-cinzel text-center">Congresso de Milagres 2024</p>
+       <p class="text-sm text-gray-400 text-center mt-2">Mais de 500 decisões por Cristo</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">👶</span>
+       <p class="text-sm text-gray-400 text-center">Ministério Infantil</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">🎤</span>
+       <p class="text-sm text-gray-400 text-center">Louvor e Adoração</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">💒</span>
+       <p class="text-sm text-gray-400 text-center">Batismos</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">🔥</span>
+       <p class="text-sm text-gray-400 text-center">Encontro de Jovens</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">💜</span>
+       <p class="text-sm text-gray-400 text-center">Congresso de Mulheres</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">🌍</span>
+       <p class="text-sm text-gray-400 text-center">Ação Social</p>
+      </div>
+      <div class="aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl border border-gold/20 flex flex-col items-center justify-center p-4 card-hover"><span class="text-4xl mb-2">📖</span>
+       <p class="text-sm text-gray-400 text-center">Escola Bíblica</p>
+      </div>
+     </div>
+     <div class="text-center mt-8">
+      <p class="text-gray-400">Siga-nos nas redes sociais para mais fotos e vídeos!</p>
+      <div class="flex justify-center gap-4 mt-4"><a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+        <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg></a> <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+        <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg></a> <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+        <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Pedidos de Oração -->
+   <section id="oracao" class="py-20 px-4 bg-[#1a1a2e] cross-pattern">
+    <div class="max-w-4xl mx-auto">
+     <div class="text-center mb-12">
+      <p class="text-gold font-cinzel tracking-widest mb-2">ESTAMOS ORANDO POR VOCÊ</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Pedidos de Oração</h2>
+     </div>
+     <div class="bg-gradient-to-br from-[#0f0f1a] to-[#1a1a2e] border border-gold/30 rounded-2xl p-8 md:p-12">
+      <div class="text-center mb-8">
+       <svg class="w-16 h-16 text-gold mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+       </svg>
+       <p class="text-gray-300 text-lg italic mb-2">"Confessai as vossas culpas uns aos outros, e orai uns pelos outros, para que sareis. A oração feita por um justo pode muito em seus efeitos."</p>
+       <p class="text-gold font-semibold">Tiago 5:16</p>
+      </div>
+      <form id="prayer-form" class="space-y-6">
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div><label for="prayer-name" class="block text-gold font-semibold mb-2">Seu Nome</label> <input type="text" id="prayer-name" required class="w-full bg-[#0f0f1a] border border-gold/30 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-gold transition-colors" placeholder="Digite seu nome">
+        </div>
+        <div><label for="prayer-email" class="block text-gold font-semibold mb-2">E-mail (opcional)</label> <input type="email" id="prayer-email" class="w-full bg-[#0f0f1a] border border-gold/30 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-gold transition-colors" placeholder="seu@email.com">
+        </div>
+       </div>
+       <div><label for="prayer-phone" class="block text-gold font-semibold mb-2">Telefone (opcional)</label> <input type="tel" id="prayer-phone" class="w-full bg-[#0f0f1a] border border-gold/30 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-gold transition-colors" placeholder="(00) 00000-0000">
+       </div>
+       <div><label for="prayer-request" class="block text-gold font-semibold mb-2">Seu Pedido de Oração</label> <textarea id="prayer-request" rows="5" required class="w-full bg-[#0f0f1a] border border-gold/30 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-gold transition-colors resize-none" placeholder="Compartilhe conosco seu pedido. Sua oração será tratada com sigilo e amor..."></textarea>
+       </div><button type="submit" id="prayer-submit" class="w-full bg-gold hover-gold text-[#0f0f1a] font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"> <span id="prayer-btn-text">🙏 Enviar Pedido de Oração</span>
+        <svg id="prayer-loading" class="hidden w-5 h-5 animate-spin" fill="none" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" /> <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+        </svg></button>
+      </form>
+      <div id="prayer-success" class="hidden text-center py-8">
+       <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <h3 class="font-cinzel text-2xl font-bold text-gold mb-2">Pedido Recebido!</h3>
+       <p class="text-gray-300">Nossa equipe de intercessores está orando por você. Deus é fiel!</p><button id="new-prayer" class="mt-6 text-gold underline hover:no-underline">Enviar outro pedido</button>
+      </div>
+     </div><!-- Pedidos Recebidos (Admin View) -->
+     <div id="prayers-list-container" class="mt-8 bg-[#0f0f1a]/50 border border-gold/20 rounded-2xl p-6">
+      <h3 class="font-cinzel text-xl font-bold text-gold mb-4 flex items-center gap-2">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+       </svg> Pedidos Recebidos</h3>
+      <div id="prayers-list" class="space-y-3 max-h-96 overflow-y-auto">
+       <p class="text-gray-400 text-center py-4">Nenhum pedido de oração ainda.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Dízimos e Ofertas -->
+   <section id="ofertas" class="py-20 px-4 bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a]">
+    <div class="max-w-4xl mx-auto">
+     <div class="text-center mb-12">
+      <p class="text-gold font-cinzel tracking-widest mb-2">CONTRIBUIÇÃO</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Dízimos e Ofertas</h2>
+     </div>
+     <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/30 rounded-2xl p-8 md:p-12 mb-8">
+      <div class="text-center mb-8">
+       <svg class="w-16 h-16 text-gold mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg>
+       <p class="text-gray-300 text-lg italic mb-2">"Trazei todos os dízimos à casa do tesouro, para que haja mantimento na minha casa, e depois fazei prova de mim, diz o Senhor dos Exércitos, se eu não vos abrir as janelas do céu, e não derramar sobre vós uma bênção tal, que dela vos advenha a maior abastança."</p>
+       <p class="text-gold font-semibold">Malaquias 3:10</p>
+      </div>
+      <div class="bg-[#0f0f1a]/50 rounded-xl p-6 mb-6">
+       <h3 class="font-cinzel text-xl font-bold text-gold mb-4">Por que Contribuir?</h3>
+       <p class="text-gray-300 mb-4">A contribuição financeira é um ato de adoração e obediência a Deus. Através dos dízimos e ofertas, a obra do Senhor avança: evangelização, assistência social, manutenção do templo e apoio a missionários.</p>
+       <p class="text-gray-300">Quando você contribui, está investindo no Reino de Deus e participando ativamente da expansão do Evangelho. É uma semente plantada que Deus multiplica em bênçãos para sua vida!</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- PIX -->
+       <div class="bg-[#0f0f1a] border border-gold/30 rounded-xl p-6 text-center card-hover">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+         <svg class="w-8 h-8 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M15.45 16.52l-3.01-3.01c-.11-.11-.24-.13-.31-.13s-.2.02-.31.13L8.8 16.53c-.34.34-.87.34-1.21 0l-.71-.71c-.34-.34-.34-.87 0-1.21l3.01-3.01c.34-.34.34-.87 0-1.21L6.88 7.38c-.34-.34-.34-.87 0-1.21l.71-.71c.34-.34.87-.34 1.21 0l3.01 3.01c.34.34.87.34 1.21 0l3.01-3.01c.34-.34.87-.34 1.21 0l.71.71c.34.34.34.87 0 1.21l-3.01 3.01c-.34.34-.34.87 0 1.21l3.01 3.01c.34.34.34.87 0 1.21l-.71.71c-.34.34-.87.34-1.21 0l-.57-.01z" />
+         </svg>
+        </div>
+        <h4 class="font-cinzel text-lg font-bold text-gold mb-2">PIX</h4>
+        <p class="text-gray-400 text-sm mb-4">Transferência instantânea</p>
+        <div class="bg-gold/10 rounded-lg p-3">
+         <p class="text-xs text-gray-400 mb-1">Chave PIX (E-mail):</p>
+         <p id="pix-key" class="text-gold font-mono text-sm break-all">igreja@altardosmilagres.com.br</p>
+        </div>
+       </div><!-- Transferência -->
+       <div class="bg-[#0f0f1a] border border-gold/30 rounded-xl p-6 text-center card-hover">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+         <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+         </svg>
+        </div>
+        <h4 class="font-cinzel text-lg font-bold text-gold mb-2">Transferência Bancária</h4>
+        <p class="text-gray-400 text-sm mb-4">Depósito ou TED</p>
+        <div class="bg-gold/10 rounded-lg p-3 text-left text-sm">
+         <p><span class="text-gray-400">Banco:</span> <span class="text-gold">001 - Banco do Brasil</span></p>
+         <p><span class="text-gray-400">Agência:</span> <span class="text-gold">0000-0</span></p>
+         <p><span class="text-gray-400">Conta:</span> <span class="text-gold">00000-0</span></p>
+         <p><span class="text-gray-400">CNPJ:</span> <span class="text-gold">00.000.000/0001-00</span></p>
+        </div>
+       </div>
+      </div>
+      <div class="mt-8 text-center">
+       <div class="bg-gold/10 border border-gold/30 rounded-xl p-4 inline-block">
+        <p class="text-gold font-semibold">💒 Presencialmente</p>
+        <p class="text-gray-300 text-sm">Nos cultos, você também pode entregar seu dízimo e oferta nos envelopes disponíveis</p>
+       </div>
+      </div>
+     </div>
+     <div class="text-center">
+      <p class="text-gray-400 italic">"Dai, e ser-vos-á dado; boa medida, recalcada, sacudida e transbordando." - Lucas 6:38</p>
+     </div>
+    </div>
+   </section><!-- Contato -->
+   <section id="contato" class="py-20 px-4 bg-[#0f0f1a] cross-pattern">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-12">
+      <p class="text-gold font-cinzel tracking-widest mb-2">VENHA NOS CONHECER</p>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold">Entre em Contato</h2>
+     </div>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><!-- Informações de Contato -->
+      <div class="space-y-6">
+       <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/30 rounded-2xl p-8">
+        <h3 class="font-cinzel text-2xl font-bold text-gold mb-6">Informações</h3>
+        <div class="space-y-6">
+         <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+           <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+           </svg>
+          </div>
+          <div>
+           <p class="font-bold text-gold mb-1">Endereço</p>
+           <p id="endereco-display" class="text-gray-300">Rua da Fé, 123 - Centro</p>
+           <p class="text-gray-400">Cidade - Estado, CEP 00000-000</p>
+          </div>
+         </div>
+         <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+           <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+           </svg>
+          </div>
+          <div>
+           <p class="font-bold text-gold mb-1">Telefone / WhatsApp</p>
+           <p id="telefone-display" class="text-gray-300">(11) 99999-9999</p><a href="#" class="text-gold hover:underline text-sm">Clique para chamar no WhatsApp</a>
+          </div>
+         </div>
+         <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+           <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+           </svg>
+          </div>
+          <div>
+           <p class="font-bold text-gold mb-1">E-mail</p>
+           <p class="text-gray-300">contato@altardosmilagres.com.br</p>
+          </div>
+         </div>
+        </div>
+       </div><!-- Redes Sociais -->
+       <div class="bg-[#1a1a2e]/50 border border-gold/20 rounded-xl p-6">
+        <p class="font-cinzel font-bold text-gold mb-4">Siga-nos nas Redes Sociais</p>
+        <div class="flex gap-4"><a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg></a> <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg></a> <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg></a> <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold/30 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg></a>
+        </div>
+       </div>
+      </div><!-- Mapa -->
+      <div class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-gold/30 rounded-2xl overflow-hidden">
+       <div class="bg-gold/10 p-4 border-b border-gold/20">
+        <h3 class="font-cinzel text-lg font-bold text-gold flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+         </svg> Nossa Localização</h3>
+       </div>
+       <div class="h-80 bg-[#0f0f1a] flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent"></div>
+        <div class="text-center z-10">
+         <svg class="w-20 h-20 text-gold/50 mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+         <p class="text-gray-400 mb-4">Integração com Google Maps</p><a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-block bg-gold hover-gold text-[#0f0f1a] font-bold py-2 px-6 rounded-full text-sm transition-all"> Abrir no Google Maps </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-[#0a0a12] border-t border-gold/20 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+       <div class="flex items-center gap-3 mb-4">
+        <svg class="w-10 h-10 text-gold" viewbox="0 0 100 100" fill="currentColor"><path d="M50 5L55 35H65L50 50L35 35H45L50 5Z" /> <path d="M30 40L50 60L70 40L75 45L50 70L25 45L30 40Z" /> <path d="M20 55L50 85L80 55L85 60L50 95L15 60L20 55Z" />
+        </svg>
+        <div>
+         <p class="font-cinzel text-sm font-bold text-gold">INTERNACIONAL</p>
+         <p class="font-cinzel text-xs text-gray-400">O ALTAR DOS MILAGRES</p>
+        </div>
+       </div>
+       <p class="text-gray-400 text-sm">Um lugar de fé, restauração e milagres. Venha fazer parte desta família abençoada.</p>
+      </div>
+      <div>
+       <p class="font-cinzel font-bold text-gold mb-4">Links Rápidos</p>
+       <div class="space-y-2"><a href="#home" class="block text-gray-400 hover:text-gold text-sm transition-colors">Início</a> <a href="#sobre" class="block text-gray-400 hover:text-gold text-sm transition-colors">Sobre</a> <a href="#ministerios" class="block text-gray-400 hover:text-gold text-sm transition-colors">Ministérios</a> <a href="#programacao" class="block text-gray-400 hover:text-gold text-sm transition-colors">Programação</a> <a href="#oracao" class="block text-gray-400 hover:text-gold text-sm transition-colors">Pedidos de Oração</a>
+       </div>
+      </div>
+      <div>
+       <p class="font-cinzel font-bold text-gold mb-4">Horários</p>
+       <div class="space-y-2 text-sm">
+        <p class="text-gray-400"><span class="text-gold">Domingo:</span> 09h e 18h</p>
+        <p class="text-gray-400"><span class="text-gold">Terça:</span> 19h30</p>
+        <p class="text-gray-400"><span class="text-gold">Quarta:</span> 19h30</p>
+        <p class="text-gray-400"><span class="text-gold">Quinta:</span> 19h30</p>
+        <p class="text-gray-400"><span class="text-gold">Sexta:</span> 19h30</p>
+        <p class="text-gray-400"><span class="text-gold">Sábado:</span> 19h (Jovens)</p>
+       </div>
+      </div>
+     </div>
+     <div class="border-t border-gold/20 pt-8 text-center">
+      <p class="text-gray-400 text-sm mb-2">© 2025 Igreja Internacional O Altar dos Milagres. Todos os direitos reservados.</p>
+      <p class="text-gold italic text-sm">"Jesus Cristo é o mesmo ontem, hoje e eternamente." - Hebreus 13:8</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Configuration
+    const defaultConfig = {
+      nome_igreja: 'Internacional O Altar dos Milagres',
+      versiculo_destaque: 'Porque onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles.',
+      horario_domingo: '09h e 18h',
+      horario_quarta: '19h30',
+      horario_sexta: '19h30',
+      endereco: 'Rua da Fé, 123 - Centro',
+      telefone: '(11) 99999-9999',
+      pix_chave: 'igreja@altardosmilagres.com.br',
+      background_color: '#0f0f1a',
+      accent_color: '#d4af37',
+      text_color: '#f3f4f6',
+      card_color: '#1a1a2e',
+      surface_color: '#16213e'
+    };
+
+    let config = { ...defaultConfig };
+    let prayerRequests = [];
+    let currentRecordCount = 0;
+
+    // Data Handler for Prayer Requests
+    const dataHandler = {
+      onDataChanged(data) {
+        prayerRequests = data;
+        currentRecordCount = data.length;
+        renderPrayersList();
+      }
+    };
+
+    function renderPrayersList() {
+      const container = document.getElementById('prayers-list');
+      if (!container) return;
+
+      if (prayerRequests.length === 0) {
+        container.innerHTML = '<p class="text-gray-400 text-center py-4">Nenhum pedido de oração ainda.</p>';
+        return;
+      }
+
+      const existingItems = new Map(
+        [...container.children].map(el => [el.dataset.prayerId, el])
+      );
+
+      const sortedRequests = [...prayerRequests].sort((a, b) => 
+        new Date(b.createdAt) - new Date(a.createdAt)
+      );
+
+      sortedRequests.forEach(prayer => {
+        if (existingItems.has(prayer.__backendId)) {
+          const el = existingItems.get(prayer.__backendId);
+          updatePrayerElement(el, prayer);
+          existingItems.delete(prayer.__backendId);
+        } else {
+          container.appendChild(createPrayerElement(prayer));
+        }
+      });
+
+      existingItems.forEach(el => el.remove());
+    }
+
+    function createPrayerElement(prayer) {
+      const div = document.createElement('div');
+      div.dataset.prayerId = prayer.__backendId;
+      div.className = 'bg-[#1a1a2e]/50 border border-gold/10 rounded-lg p-4';
+      updatePrayerElement(div, prayer);
+      return div;
+    }
+
+    function updatePrayerElement(el, prayer) {
+      const date = new Date(prayer.createdAt);
+      const formattedDate = date.toLocaleDateString('pt-BR', { 
+        day: '2-digit', 
+        month: '2-digit', 
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+
+      el.innerHTML = `
+        <div class="flex justify-between items-start mb-2">
+          <div>
+            <p class="font-semibold text-gold">${prayer.nome || 'Anônimo'}</p>
+            <p class="text-xs text-gray-500">${formattedDate}</p>
+          </div>
+          <button onclick="deletePrayer('${prayer.__backendId}')" class="text-red-400 hover:text-red-300 text-xs px-2 py-1 rounded hover:bg-red-500/10 transition-colors">
+            Remover
+          </button>
+        </div>
+        <p class="text-gray-300 text-sm">${prayer.pedido}</p>
+        ${prayer.email ? `<p class="text-xs text-gray-500 mt-2">📧 ${prayer.email}</p>` : ''}
+        ${prayer.telefone ? `<p class="text-xs text-gray-500">📱 ${prayer.telefone}</p>` : ''}
+      `;
+    }
+
+    async function deletePrayer(backendId) {
+      const prayer = prayerRequests.find(p => p.__backendId === backendId);
+      if (!prayer) return;
+
+      const el = document.querySelector(`[data-prayer-id="${backendId}"]`);
+      if (el) {
+        el.style.opacity = '0.5';
+        el.style.pointerEvents = 'none';
+      }
+
+      const result = await window.dataSdk.delete(prayer);
+      if (!result.isOk) {
+        console.error('Erro ao excluir pedido:', result.error);
+        if (el) {
+          el.style.opacity = '1';
+          el.style.pointerEvents = 'auto';
+        }
+      }
+    }
+
+    // Prayer Form Handler
+    function setupPrayerForm() {
+      const form = document.getElementById('prayer-form');
+      const successDiv = document.getElementById('prayer-success');
+      const newPrayerBtn = document.getElementById('new-prayer');
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          if (currentRecordCount >= 999) {
+            const container = document.getElementById('prayers-list-container');
+            if (container) {
+              const warning = document.createElement('div');
+              warning.className = 'bg-yellow-500/20 border border-yellow-500/50 text-yellow-300 p-4 rounded-lg mb-4';
+              warning.textContent = 'Limite máximo de 999 pedidos atingido. Por favor, remova alguns pedidos antigos.';
+              container.insertBefore(warning, container.firstChild);
+              setTimeout(() => warning.remove(), 5000);
+            }
+            return;
+          }
+
+          const submitBtn = document.getElementById('prayer-submit');
+          const btnText = document.getElementById('prayer-btn-text');
+          const loading = document.getElementById('prayer-loading');
+
+          submitBtn.disabled = true;
+          btnText.classList.add('hidden');
+          loading.classList.remove('hidden');
+
+          const prayerData = {
+            id: Date.now().toString(),
+            nome: document.getElementById('prayer-name').value,
+            email: document.getElementById('prayer-email').value || '',
+            telefone: document.getElementById('prayer-phone').value || '',
+            pedido: document.getElementById('prayer-request').value,
+            tipo: 'oracao',
+            createdAt: new Date().toISOString()
+          };
+
+          const result = await window.dataSdk.create(prayerData);
+
+          submitBtn.disabled = false;
+          btnText.classList.remove('hidden');
+          loading.classList.add('hidden');
+
+          if (result.isOk) {
+            form.classList.add('hidden');
+            successDiv.classList.remove('hidden');
+            form.reset();
+          } else {
+            console.error('Erro ao enviar pedido:', result.error);
+          }
+        });
+      }
+
+      if (newPrayerBtn) {
+        newPrayerBtn.addEventListener('click', () => {
+          form.classList.remove('hidden');
+          successDiv.classList.add('hidden');
+        });
+      }
+    }
+
+    // Mobile Menu
+    function setupMobileMenu() {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
+      }
+    }
+
+    // Config update function
+    async function onConfigChange(newConfig) {
+      config = { ...defaultConfig, ...newConfig };
+
+      // Update Hero Section
+      const versiculoHero = document.getElementById('versiculo-hero');
+      if (versiculoHero) {
+        versiculoHero.textContent = `"${config.versiculo_destaque}"`;
+      }
+
+      // Update Schedule
+      const horarioDomingoHero = document.getElementById('horario-domingo-hero');
+      const horarioQuartaHero = document.getElementById('horario-quarta-hero');
+      const horarioSextaHero = document.getElementById('horario-sexta-hero');
+      const progDomingo = document.getElementById('prog-domingo');
+      const progQuarta = document.getElementById('prog-quarta');
+      const progSexta = document.getElementById('prog-sexta');
+
+      if (horarioDomingoHero) horarioDomingoHero.textContent = config.horario_domingo;
+      if (horarioQuartaHero) horarioQuartaHero.textContent = config.horario_quarta;
+      if (horarioSextaHero) horarioSextaHero.textContent = config.horario_sexta;
+      if (progDomingo) progDomingo.textContent = config.horario_domingo;
+      if (progQuarta) progQuarta.textContent = config.horario_quarta;
+      if (progSexta) progSexta.textContent = config.horario_sexta;
+
+      // Update Contact Info
+      const enderecoDisplay = document.getElementById('endereco-display');
+      const telefoneDisplay = document.getElementById('telefone-display');
+      const pixKey = document.getElementById('pix-key');
+
+      if (enderecoDisplay) enderecoDisplay.textContent = config.endereco;
+      if (telefoneDisplay) telefoneDisplay.textContent = config.telefone;
+      if (pixKey) pixKey.textContent = config.pix_chave;
+    }
+
+    // Initialize SDKs
+    async function init() {
+      // Initialize Element SDK
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities: (cfg) => ({
+            recolorables: [
+              {
+                get: () => cfg.background_color || defaultConfig.background_color,
+                set: (value) => {
+                  cfg.background_color = value;
+                  window.elementSdk.setConfig({ background_color: value });
+                }
+              },
+              {
+                get: () => cfg.card_color || defaultConfig.card_color,
+                set: (value) => {
+                  cfg.card_color = value;
+                  window.elementSdk.setConfig({ card_color: value });
+                }
+              },
+              {
+                get: () => cfg.text_color || defaultConfig.text_color,
+                set: (value) => {
+                  cfg.text_color = value;
+                  window.elementSdk.setConfig({ text_color: value });
+                }
+              },
+              {
+                get: () => cfg.accent_color || defaultConfig.accent_color,
+                set: (value) => {
+                  cfg.accent_color = value;
+                  window.elementSdk.setConfig({ accent_color: value });
+                }
+              },
+              {
+                get: () => cfg.surface_color || defaultConfig.surface_color,
+                set: (value) => {
+                  cfg.surface_color = value;
+                  window.elementSdk.setConfig({ surface_color: value });
+                }
+              }
+            ],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined
+          }),
+          mapToEditPanelValues: (cfg) => new Map([
+            ['nome_igreja', cfg.nome_igreja || defaultConfig.nome_igreja],
+            ['versiculo_destaque', cfg.versiculo_destaque || defaultConfig.versiculo_destaque],
+            ['horario_domingo', cfg.horario_domingo || defaultConfig.horario_domingo],
+            ['horario_quarta', cfg.horario_quarta || defaultConfig.horario_quarta],
+            ['horario_sexta', cfg.horario_sexta || defaultConfig.horario_sexta],
+            ['endereco', cfg.endereco || defaultConfig.endereco],
+            ['telefone', cfg.telefone || defaultConfig.telefone],
+            ['pix_chave', cfg.pix_chave || defaultConfig.pix_chave]
+          ])
+        });
+      }
+
+      // Initialize Data SDK
+      if (window.dataSdk) {
+        const result = await window.dataSdk.init(dataHandler);
+        if (!result.isOk) {
+          console.error('Erro ao inicializar Data SDK:', result.error);
+        }
+      }
+
+      // Setup UI
+      setupMobileMenu();
+      setupPrayerForm();
+    }
+
+    init();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c59290f80b5fe12',t:'MTc2OTY5NDIyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
